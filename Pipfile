@@ -1,0 +1,22 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[packages]
+pandas = "*"
+matplotlib = "*"
+jupyter = "*"
+ipywidgets = "*"
+scikit-image = "*"
+seaborn = "*"
+numpy = "==1.16.0"
+tqdm = "*"
+scikit-learn = "*"
+tensorflow = "==1.14.0"
+invoke = "*"
+
+[requires]
+python_version = "3.6"
+
+
