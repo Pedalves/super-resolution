@@ -1,0 +1,9 @@
+*.jpg
+*__pycache__*
+*.pyc
+.cache
+.idea/
+.ipynb_checkpoints/
+temp/
+test/
+.coverage
