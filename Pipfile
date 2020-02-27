@@ -13,8 +13,9 @@ seaborn = "*"
 numpy = "==1.16.0"
 tqdm = "*"
 scikit-learn = "*"
-tensorflow = "==1.14.0"
 invoke = "*"
+opencv-python = "*"
+tensorflow = "*"
 
 [requires]
 python_version = "3.6"
