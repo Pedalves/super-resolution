@@ -10,7 +10,7 @@ def _psnr(img1, img2):
     if mse == 0:
         return 100
     PIXEL_MAX = 1
-    return (20 * math.log10(PIXEL_MAX)) - (10 * math.log10(math.sqrt(mse)))
+    return (20 * math.log10(PIXEL_MAX)) - (10 * math.log10(mse))
 
 
 def psnr(y, y_pred, log=True):
