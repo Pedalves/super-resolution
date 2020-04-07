@@ -16,6 +16,7 @@ scikit-learn = "*"
 invoke = "*"
 opencv-python = "*"
 tensorflow = "*"
+scipy = "*"
 
 [requires]
 python_version = "3.6"

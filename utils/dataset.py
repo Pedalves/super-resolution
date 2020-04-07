@@ -3,8 +3,6 @@ import os
 import numpy as np
 from skimage.transform import downscale_local_mean
 
-np.random.seed(0)
-
 
 class DatasetReader:
     def __init__(self, dataset_path=''):
@@ -19,6 +17,8 @@ class DatasetReader:
         :param img_size: size of the images in the dataset
         :return: rescaled cropped images(x) and original cropped images(y)
         """
+        np.random.seed(0)
+
         shape1 = (img_size * (self.well_1.shape[0] // img_size), img_size * (self.well_1.shape[1] // img_size))
         data_coord1 = [(img_size * i, img_size * j) for i in range(shape1[0] // img_size) for j in
                        range(shape1[1] // img_size)]
@@ -48,6 +48,14 @@ class DatasetReader:
         height = 1040
         length = 7760
 
+        with open(os.path.join(self.dataset_path, 'mod_vp_05_nx7760_nz1040.bin'), 'rb') as f:
+            data = np.fromfile(f, dtype=np.float32)
+            vel = np.reshape(data, [length, height])
+            vel = vel.T
+
+            # Cutting edges with repeated data
+            vel = vel[:, 1000:6900]
+
         with open(os.path.join(self.dataset_path, 'IMG1_dip_FINAL_REF_model_1_true.bin'), 'rb') as f:
             data = np.fromfile(f, dtype=np.float32)
             self.well_1 = np.reshape(data, [length, height])
@@ -55,6 +63,15 @@ class DatasetReader:
 
             # Cutting edges with repeated data
             self.well_1 = self.well_1[:, 1000:6900]
+
+            # Clean Water
+            i_max = 0
+            min_vel = np.min(vel)
+            for i in range(vel.shape[0]):
+                for j in range(vel.shape[1]):
+                    if (vel[i, j] <= min_vel) and (i > i_max):
+                        i_max = i
+            self.well_1 = self.well_1[i_max:, :]
 
             # Normalizing
             if normalize:
@@ -65,6 +82,14 @@ class DatasetReader:
         height = 1216
         length = 6912
 
+        with open(os.path.join(self.dataset_path, 'pluto_VP_SI_02.bin'), 'rb') as f:
+            data = np.fromfile(f, dtype=np.float32)
+            vel = np.reshape(data, [length, height])
+            vel = vel.T
+
+            # Cutting edges with repeated data
+            vel = vel[:, 1400:5550]
+
         with open(os.path.join(self.dataset_path, 'IMG1_dip_FINAL_REF_model_2_true.bin'), 'rb') as f:
             data = np.fromfile(f, dtype=np.float32)
             self.well_2 = np.reshape(data, [length, height])
@@ -72,6 +97,15 @@ class DatasetReader:
 
             # Cutting edges with repeated data
             self.well_2 = self.well_2[:, 1400:5550]
+
+            # Clean Water
+            i_max = 0
+            min_vel = np.min(vel)
+            for i in range(vel.shape[0]):
+                for j in range(vel.shape[1]):
+                    if (vel[i, j] <= min_vel) and (i > i_max):
+                        i_max = i
+            self.well_2 = self.well_2[i_max:, :]
 
             # Normalizing
             if normalize:

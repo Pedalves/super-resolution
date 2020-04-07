@@ -9,7 +9,7 @@ class Baseline:
         self.scale = scale
 
     def predict(self, x):
-        return [rescale(img, self.scale, anti_aliasing=False) for img in x]
+        return [rescale(img, self.scale, anti_aliasing=False, order=3) for img in x]
 
     def evaluate(self, x, y):
         y_pred = self.predict(x)
