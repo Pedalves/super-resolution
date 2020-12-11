@@ -15,8 +15,8 @@ tqdm = "*"
 scikit-learn = "*"
 invoke = "*"
 opencv-python = "*"
-tensorflow = "*"
+tensorflow = "==2.3.0"
 scipy = "*"
 
 [requires]
-python_version = "3.6"
+python_version = "3.7"
