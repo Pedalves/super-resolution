@@ -27,7 +27,7 @@ Alguns destes notebooks podem estar descontinuados devido ao desenvovlimento e a
 
 `utils/`: Funções auxiliares   
 
-## Documentation
+## Documentação
 
 a [documentação](docs/README.md) deste projeto apresenta os dados necessarios e os módulos `dataset`, `models`, 
 `super_resolution`, `tasks` e `utils`.
