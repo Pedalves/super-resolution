@@ -14,9 +14,10 @@ tf.keras.backend.set_floatx('float32')
 
 
 class MLP(NeuralNetwork):
-    def __init__(self, init_shape, layers_dims, original_dim=64, learning_rate=0.001,
-                 activ_hidden=tf.nn.relu, activ_out=tf.nn.tanh, loss='mae'):
-        super(MLP, self).__init__(init_shape=init_shape, base_name='MLP', learning_rate=learning_rate, loss=loss)
+    def __init__(self, init_shape, layers_dims=[512], original_dim=64, learning_rate=0.0001,
+                 activ_hidden=tf.nn.tanh, activ_out=tf.nn.tanh, loss='mae', **kwargs):
+        super(MLP, self).__init__(init_shape=init_shape, base_name='MLP',
+                                  learning_rate=learning_rate, loss=loss, **kwargs)
 
         self.resolution = original_dim
 

@@ -9,3 +9,4 @@ test/
 .coverage
 weights/
 *.h5
+*.bin

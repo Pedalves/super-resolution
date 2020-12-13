@@ -116,7 +116,7 @@ class NeuralNetwork(tf.keras.Model):
 
             if verbose:
                 if epoch % frequency == 0 or epoch == 0:
-                    psnr_val = psnr(y_val, self(x_val))
+                    psnr_val = psnr(y_val, self(x_val), verbose=False)
                     print(f'Epoch: {epoch} Train Loss: {loss_train} Validation Loss: {np.mean(loss_val)} '
                           f'Validation PSNR: {psnr_val}')
 
@@ -128,7 +128,7 @@ class NeuralNetwork(tf.keras.Model):
             self.loss_metric.reset_states()
 
         if verbose:
-            psnr_val = psnr(y_val, self(x_val))
+            psnr_val = psnr(y_val, self(x_val), verbose=False)
             print(f'Epoch: {epoch} Train Loss: {loss_train} Validation Loss: {np.mean(loss_val)} '
                   f'Validation PSNR: {psnr_val}')
 
@@ -136,7 +136,9 @@ class NeuralNetwork(tf.keras.Model):
 
 
 from .mlp import MLP
+from .residual_dense_network import ResidualDenseNetwork
 
 __all__ = [
-    'MLP'
+    'MLP',
+    'ResidualDenseNetwork'
 ]

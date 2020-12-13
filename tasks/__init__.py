@@ -1,5 +1,10 @@
 from invoke import Collection
 
-namespace = Collection(
+from . import tests, mlp, baseline, rdn
 
+namespace = Collection(
+    tests,
+    mlp,
+    rdn,
+    baseline
 )

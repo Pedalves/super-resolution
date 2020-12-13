@@ -15,13 +15,11 @@ Este projeto visa o desenvolvimento de um sistema de apoio à experimentação d
 `ipynb/`: Sandbox com os Jupyter notebooks utilizados durante o desenvolvimento do projeto. 
 Alguns destes notebooks podem estar descontinuados devido ao desenvovlimento e alterações dos moódulos deste projeto
 
-`leaderboard/`: Desenvolvimento do leaderboard
-
 `models/`: Desenvolvimento das redes neurais e os demais modelos de super resolução
 
 `super_resolution/`: Módulo principal do projeto, contendo as função com o pipeline de experimentação 
 
-`tasks/`: Funções baseadas na biblioteca Invoke para serem rodadas por linha de comando
+`tasks/`: Funções baseadas na biblioteca [invoke](http://www.pyinvoke.org/) para serem rodadas por linha de comando
 
 `tests/`: Testes unitários
 
@@ -30,7 +28,7 @@ Alguns destes notebooks podem estar descontinuados devido ao desenvovlimento e a
 ## Documentação
 
 a [documentação](docs/README.md) deste projeto apresenta os dados necessarios e os módulos `dataset`, `models`, 
-`super_resolution`, `tasks` e `utils`.
+`super_resolution` e `utils`.
 
 ## Desenvolvimento
 
@@ -60,3 +58,21 @@ Instale o `pipenv` conforme descrito em seu [repositoria oficial](https://github
 ```
 pipenv install
 ``` 
+
+## Invoke
+
+Este projeto conta com o uso da biblioteca [invoke](http://www.pyinvoke.org/), uma ferramente de execução de tarefas, 
+para disponibilizar o uso do projeto por linha de comando.
+As principais tarefas implementadas e seus usos se encontra descritos a baixo: 
+
+
+### Baseline
+
+
+### MLP
+
+
+### Residual Dense Network
+
+
+### Testes
