@@ -15,6 +15,8 @@ class NeuralNetwork(tf.keras.Model):
 
         self.base_name = base_name
 
+        self.loss_name = loss
+
         self.init_shape = init_shape
 
         self.learning_rate = learning_rate
@@ -36,8 +38,11 @@ class NeuralNetwork(tf.keras.Model):
     def __str__(self):
         return self.get_name()
 
+    def get_architecture_str(self):
+        raise NotImplementedError
+
     def get_name(self):
-        return f'{self.base_name}-ep_{self.total_epochs}'
+        return f'{self.base_name}-{self.get_architecture_str()}-ep_{self.total_epochs}'
 
     def call(self, input_features):
         raise NotImplementedError

@@ -15,7 +15,7 @@ Este projeto visa o desenvolvimento de um sistema de apoio à experimentação d
 `ipynb/`: Sandbox com os Jupyter notebooks utilizados durante o desenvolvimento do projeto. 
 Alguns destes notebooks podem estar descontinuados devido ao desenvovlimento e alterações dos moódulos deste projeto
 
-`leaderboard/`: desenvolvimento do leaderboard
+`leaderboard/`: Desenvolvimento do leaderboard
 
 `models/`: Desenvolvimento das redes neurais e os demais modelos de super resolução
 
@@ -39,7 +39,7 @@ como gerenciador de versão python. Ele pode ser facilmente instalado com [pyenv
 
 ### Clone
 
-Para clonar esse repositorio, execute o seguinte comando:
+Para clonar este repositorio, execute o seguinte comando:
 
 ```
 git clone https://github.com/Pedalves/super-resolution.git
