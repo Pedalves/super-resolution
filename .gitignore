@@ -10,3 +10,4 @@ test/
 weights/
 *.h5
 *.bin
+*.DS_Store
