@@ -8,3 +8,4 @@ temp/
 test/
 .coverage
 weights/
+*.h5

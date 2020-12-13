@@ -1,15 +1,18 @@
 import pandas as pd
-from skimage.transform import rescale
+import cv2
 
 from utils.metrics import mse, psnr
 
 
 class Baseline:
+    """"
+    Bi-cubic interpolation baseline
+    """
     def __init__(self, scale=2):
         self.scale = scale
 
     def predict(self, x):
-        return [rescale(img, self.scale, anti_aliasing=False, order=3) for img in x]
+        return [cv2.resize(img, (img.shape[0]*self.scale, img.shape[1]*self.scale)) for img in x]
 
     def evaluate(self, x, y):
         y_pred = self.predict(x)

@@ -13,37 +13,37 @@ def _psnr(img1, img2):
     return (20 * math.log10(PIXEL_MAX)) - (10 * math.log10(mse))
 
 
-def psnr(y, y_pred, log=True):
+def psnr(y, y_pred, verbose=True):
     psnr_sum = 0
 
     for i in range(len(y)):
         psnr_sum += _psnr(y[i], y_pred[i])
 
-    if log:
+    if verbose:
         print(f"Mean PSNR {psnr_sum / len(y)}")
 
     return psnr_sum / len(y)
 
 
-def mse(y, y_pred, log=True):
+def mse(y, y_pred, verbose=True):
     mse_sum = 0
 
     for i in range(len(y)):
         mse_sum += mean_squared_error(y[i], y_pred[i])
 
-    if log:
+    if verbose:
         print(f"Mean MSE {mse_sum / len(y)}")
 
     return mse_sum / len(y)
 
 
-def ssim(y, y_pred, log=True):
+def ssim(y, y_pred, verbose=True):
     ssim_sum = 0
 
     for i in range(len(y)):
         ssim_sum += structural_similarity(y[i], y_pred[i])
 
-    if log:
+    if verbose:
         print(f"Mean SSIM {ssim_sum / len(y)}")
 
     return ssim_sum / len(y)

@@ -4,6 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from skimage.transform import downscale_local_mean
+import cv2
 
 
 class ArtificialDatasetReader:
