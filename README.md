@@ -32,12 +32,6 @@ Alguns destes notebooks podem estar descontinuados devido ao desenvovlimento e a
 a [documentação](docs/README.md) deste projeto apresenta os dados necessarios e os módulos `dataset`, `models`, 
 `super_resolution`, `tasks` e `utils`.
 
-of this project covers the required third-party data and an overview of the pulses, trips and scores 
-modules. The pulses module is responsible for estimating pulse CEP and risk region and computing the history of driver's overnight 
-CEP. The trips module computes a set of features for each driver trip. The scores module computes the five scores
-developed in this project - schedule, circulation, scheduled circulation, driver signature and overall scores.
-
-
 ## Desenvolvimento
 
 Este projeto e desenvolvido utilizando `python 3.7.4`. É recomendado usar o [pyenv](https://github.com/pyenv/pyenv)
