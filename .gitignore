@@ -11,3 +11,4 @@ weights/
 *.h5
 *.bin
 *.DS_Store
+.pytest_cache

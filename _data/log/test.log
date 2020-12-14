@@ -1,0 +1,105 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.7.7, pytest-6.2.0, py-1.10.0, pluggy-0.13.1 -- /Users/pedroferreira/.local/share/virtualenvs/super-resolution-d9VJcJHx/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/pedroferreira/Workspace/super-resolution, configfile: pytest.ini
+collecting ... 
+----------------------------- live log collection ------------------------------
+2020-12-14 05:00:57 [ WARNING] Layer MLP is casting an input tensor from dtype float64 to the layer's dtype of float32, which is new behavior in TensorFlow 2.  The layer has dtype float32 because its dtype defaults to floatx.
+
+If you intended to run this layer in float32, you can safely ignore this warning. If in doubt, this warning is likely only an issue if you are porting a TensorFlow 1.X model to TensorFlow 2.
+
+To change all layers to have dtype float64 by default, call `tf.keras.backend.set_floatx('float64')`. To change just this layer, pass dtype='float64' to the layer constructor. If you are the author of this layer, you can disable autocasting by passing autocast=False to the base Layer constructor.
+ (base_layer.py:2377)
+2020-12-14 05:00:57 [ WARNING] Layer MLP is casting an input tensor from dtype float64 to the layer's dtype of float32, which is new behavior in TensorFlow 2.  The layer has dtype float32 because its dtype defaults to floatx.
+
+If you intended to run this layer in float32, you can safely ignore this warning. If in doubt, this warning is likely only an issue if you are porting a TensorFlow 1.X model to TensorFlow 2.
+
+To change all layers to have dtype float64 by default, call `tf.keras.backend.set_floatx('float64')`. To change just this layer, pass dtype='float64' to the layer constructor. If you are the author of this layer, you can disable autocasting by passing autocast=False to the base Layer constructor.
+ (base_layer.py:2377)
+2020-12-14 05:00:58 [ WARNING] Layer RDN is casting an input tensor from dtype float64 to the layer's dtype of float32, which is new behavior in TensorFlow 2.  The layer has dtype float32 because its dtype defaults to floatx.
+
+If you intended to run this layer in float32, you can safely ignore this warning. If in doubt, this warning is likely only an issue if you are porting a TensorFlow 1.X model to TensorFlow 2.
+
+To change all layers to have dtype float64 by default, call `tf.keras.backend.set_floatx('float64')`. To change just this layer, pass dtype='float64' to the layer constructor. If you are the author of this layer, you can disable autocasting by passing autocast=False to the base Layer constructor.
+ (base_layer.py:2377)
+2020-12-14 05:00:58 [ WARNING] Layer MLP is casting an input tensor from dtype float64 to the layer's dtype of float32, which is new behavior in TensorFlow 2.  The layer has dtype float32 because its dtype defaults to floatx.
+
+If you intended to run this layer in float32, you can safely ignore this warning. If in doubt, this warning is likely only an issue if you are porting a TensorFlow 1.X model to TensorFlow 2.
+
+To change all layers to have dtype float64 by default, call `tf.keras.backend.set_floatx('float64')`. To change just this layer, pass dtype='float64' to the layer constructor. If you are the author of this layer, you can disable autocasting by passing autocast=False to the base Layer constructor.
+ (base_layer.py:2377)
+2020-12-14 05:00:58 [ WARNING] Layer MLP is casting an input tensor from dtype float64 to the layer's dtype of float32, which is new behavior in TensorFlow 2.  The layer has dtype float32 because its dtype defaults to floatx.
+
+If you intended to run this layer in float32, you can safely ignore this warning. If in doubt, this warning is likely only an issue if you are porting a TensorFlow 1.X model to TensorFlow 2.
+
+To change all layers to have dtype float64 by default, call `tf.keras.backend.set_floatx('float64')`. To change just this layer, pass dtype='float64' to the layer constructor. If you are the author of this layer, you can disable autocasting by passing autocast=False to the base Layer constructor.
+ (base_layer.py:2377)
+2020-12-14 05:00:58 [ WARNING] Layer RDN is casting an input tensor from dtype float64 to the layer's dtype of float32, which is new behavior in TensorFlow 2.  The layer has dtype float32 because its dtype defaults to floatx.
+
+If you intended to run this layer in float32, you can safely ignore this warning. If in doubt, this warning is likely only an issue if you are porting a TensorFlow 1.X model to TensorFlow 2.
+
+To change all layers to have dtype float64 by default, call `tf.keras.backend.set_floatx('float64')`. To change just this layer, pass dtype='float64' to the layer constructor. If you are the author of this layer, you can disable autocasting by passing autocast=False to the base Layer constructor.
+ (base_layer.py:2377)
+2020-12-14 05:00:58 [ WARNING] Layer RDN is casting an input tensor from dtype float64 to the layer's dtype of float32, which is new behavior in TensorFlow 2.  The layer has dtype float32 because its dtype defaults to floatx.
+
+If you intended to run this layer in float32, you can safely ignore this warning. If in doubt, this warning is likely only an issue if you are porting a TensorFlow 1.X model to TensorFlow 2.
+
+To change all layers to have dtype float64 by default, call `tf.keras.backend.set_floatx('float64')`. To change just this layer, pass dtype='float64' to the layer constructor. If you are the author of this layer, you can disable autocasting by passing autocast=False to the base Layer constructor.
+ (base_layer.py:2377)
+collected 15 items
+
+tests/unit/dataset/test_artificial_dataset.py::test_load_model_shape PASSED
+tests/unit/dataset/test_artificial_dataset.py::test_remove_water PASSED
+tests/unit/dataset/test_artificial_dataset.py::test_get_rgb_data PASSED
+tests/unit/dataset/test_artificial_dataset.py::test_img_size PASSED
+tests/unit/dataset/test_artificial_dataset.py::test_normalize PASSED
+tests/unit/metrics/test_metrics.py::test_mse PASSED
+tests/unit/metrics/test_metrics.py::test_mse_all_equal PASSED
+tests/unit/metrics/test_metrics.py::test_psnr PASSED
+tests/unit/metrics/test_metrics.py::test_psnr_all_equal PASSED
+tests/unit/models/test_neural_networks.py::test_neural_networks_super_class 
+-------------------------------- live log call ---------------------------------
+2020-12-14 05:01:14 [ WARNING] Layer MLP is casting an input tensor from dtype float64 to the layer's dtype of float32, which is new behavior in TensorFlow 2.  The layer has dtype float32 because its dtype defaults to floatx.
+
+If you intended to run this layer in float32, you can safely ignore this warning. If in doubt, this warning is likely only an issue if you are porting a TensorFlow 1.X model to TensorFlow 2.
+
+To change all layers to have dtype float64 by default, call `tf.keras.backend.set_floatx('float64')`. To change just this layer, pass dtype='float64' to the layer constructor. If you are the author of this layer, you can disable autocasting by passing autocast=False to the base Layer constructor.
+ (base_layer.py:2377)
+2020-12-14 05:01:14 [ WARNING] Layer RDN is casting an input tensor from dtype float64 to the layer's dtype of float32, which is new behavior in TensorFlow 2.  The layer has dtype float32 because its dtype defaults to floatx.
+
+If you intended to run this layer in float32, you can safely ignore this warning. If in doubt, this warning is likely only an issue if you are porting a TensorFlow 1.X model to TensorFlow 2.
+
+To change all layers to have dtype float64 by default, call `tf.keras.backend.set_floatx('float64')`. To change just this layer, pass dtype='float64' to the layer constructor. If you are the author of this layer, you can disable autocasting by passing autocast=False to the base Layer constructor.
+ (base_layer.py:2377)
+PASSED
+tests/unit/models/test_neural_networks.py::test_neural_network_name[model0-MLP-a_512-hl_tanh-ol_tanh-l_mae-lr_0.0001-ep_0] PASSED
+tests/unit/models/test_neural_networks.py::test_neural_network_name[model1-MLP-a_512_10-hl_tanh-ol_tanh-l_mse-lr_0.01-ep_0] PASSED
+tests/unit/models/test_neural_networks.py::test_neural_network_name[model2-RDN-a_64-rdb_12-bs_6-hl_relu-ol_tanh-l_mae-lr_0.0001-ep_0] PASSED
+tests/unit/models/test_neural_networks.py::test_save_neural_network[model_10-model_20] Mean MSE 0.011192738768332032
+Mean PSNR 32.60978320493138
+weights saved as _data/weights/MLP-a_512-hl_tanh-ol_tanh-l_mae-lr_0.0001-ep_1.h5
+Mean MSE 0.011192738768332032
+Mean PSNR 32.60978320493138
+PASSED
+tests/unit/models/test_neural_networks.py::test_save_neural_network[model_11-model_21] Mean MSE 0.001490128778354895
+Mean PSNR 42.10236627258432
+weights saved as _data/weights/RDN-a_64-rdb_3-bs_1-hl_relu-ol_tanh-l_mae-lr_0.0001-ep_1.h5
+Mean MSE 0.001490128778354895
+Mean PSNR 42.10236627258432
+PASSED
+
+=============================== warnings summary ===============================
+../../.local/share/virtualenvs/super-resolution-d9VJcJHx/lib/python3.7/site-packages/tensorflow/python/data/ops/iterator_ops.py:546
+  /Users/pedroferreira/.local/share/virtualenvs/super-resolution-d9VJcJHx/lib/python3.7/site-packages/tensorflow/python/data/ops/iterator_ops.py:546: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3,and in 3.9 it will stop working
+    class IteratorBase(collections.Iterator, trackable.Trackable,
+
+../../.local/share/virtualenvs/super-resolution-d9VJcJHx/lib/python3.7/site-packages/tensorflow/python/data/ops/dataset_ops.py:106
+  /Users/pedroferreira/.local/share/virtualenvs/super-resolution-d9VJcJHx/lib/python3.7/site-packages/tensorflow/python/data/ops/dataset_ops.py:106: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3,and in 3.9 it will stop working
+    class DatasetV2(collections.Iterable, tracking_base.Trackable,
+
+../../.local/share/virtualenvs/super-resolution-d9VJcJHx/lib/python3.7/site-packages/tensorflow/python/autograph/utils/testing.py:21
+  /Users/pedroferreira/.local/share/virtualenvs/super-resolution-d9VJcJHx/lib/python3.7/site-packages/tensorflow/python/autograph/utils/testing.py:21: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+    import imp
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+================== 15 passed, 3 warnings in 74.12s (0:01:14) ===================

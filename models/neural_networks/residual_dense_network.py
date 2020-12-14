@@ -18,7 +18,7 @@ class ResidualDenseNetwork(NeuralNetwork):
     def __init__(self, init_shape, filters=64, original_dim=64, rdb_blocks=3, rdb_block_size=3,
                  learning_rate=0.0001, activ_hidden=tf.nn.relu, activ_out=tf.nn.tanh, loss='mae', **kwargs):
         super(ResidualDenseNetwork, self).__init__(init_shape=init_shape,
-                                                   base_name='ResidualDenseNetwork',
+                                                   base_name='RDN',
                                                    learning_rate=learning_rate, loss=loss, **kwargs)
 
         self.resolution = original_dim

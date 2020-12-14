@@ -64,7 +64,7 @@ class NeuralNetwork(tf.keras.Model):
         Get the network`s name
         :return: network`s str name
         """
-        return f'{self.base_name}-{self.get_architecture_str()}-ep_{self.total_epochs}'
+        return f'{self.base_name}-{self.get_architecture_str()}-l_{self.loss_name}-lr_{self.learning_rate}-ep_{self.total_epochs}'
 
     def call(self, input_features):
         """
@@ -205,5 +205,6 @@ from .residual_dense_network import ResidualDenseNetwork
 
 __all__ = [
     'MLP',
-    'ResidualDenseNetwork'
+    'ResidualDenseNetwork',
+    'NeuralNetwork'
 ]

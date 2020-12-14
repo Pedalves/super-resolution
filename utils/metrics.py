@@ -6,6 +6,12 @@ from sklearn.metrics import mean_squared_error
 
 
 def _psnr(img1, img2):
+    """
+    PSNR between two images
+    :param img1: image 1
+    :param img2: image 2
+    :return: PSNR value
+    """
     mse = np.mean((img1 - img2) ** 2)
     if mse == 0:
         return 100
@@ -14,6 +20,13 @@ def _psnr(img1, img2):
 
 
 def psnr(y, y_pred, verbose=True):
+    """
+    PSNR between two arrays
+    :param y: ground truth
+    :param y_pred: predicted values
+    :param verbose: set verbosity
+    :return: PSNR value
+    """
     psnr_sum = 0
 
     for i in range(len(y)):
@@ -26,6 +39,14 @@ def psnr(y, y_pred, verbose=True):
 
 
 def mse(y, y_pred, verbose=True):
+    """
+    MSE between two arrays
+    :param y: ground truth
+    :param y_pred: predicted values
+    :param verbose: set verbosity
+    :return: MSE value
+    """
+
     mse_sum = 0
 
     for i in range(len(y)):
@@ -38,6 +59,13 @@ def mse(y, y_pred, verbose=True):
 
 
 def ssim(y, y_pred, verbose=True):
+    """
+    SSIM between two arrays of images
+    :param y: ground truth
+    :param y_pred: predicted values
+    :param verbose: set verbosity
+    :return: SSIM value
+    """
     ssim_sum = 0
 
     for i in range(len(y)):

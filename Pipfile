@@ -17,6 +17,7 @@ invoke = "*"
 opencv-python = "*"
 tensorflow = "==2.3.0"
 scipy = "*"
+pytest = "*"
 
 [requires]
 python_version = "3.7"
