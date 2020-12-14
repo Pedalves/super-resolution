@@ -76,8 +76,8 @@ class ArtificialDatasetReader:
         load well's data from the artificial dataset
         :param height: well height
         :param length: well length
-        :param vel_path: vel csv file name
-        :param well_path: well csv file name
+        :param vel_path: vel bin file name
+        :param well_path: well bin file name
         :param edges: tuple containing lower and upper edges limits
         :param normalize: boolean to normalize the dataset
         :return: numpy array with well's data
