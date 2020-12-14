@@ -17,7 +17,7 @@ Alguns destes notebooks podem estar descontinuados devido ao desenvovlimento e a
 
 `models/`: Desenvolvimento das redes neurais e os demais modelos de super resolução
 
-`super_resolution/`: Módulo principal do projeto, contendo as função com o pipeline de experimentação 
+`super_resolution/`: Módulo principal do projeto, contendo as função com o pipeline de experimentação. 
 
 `tasks/`: Funções baseadas na biblioteca [invoke](http://www.pyinvoke.org/) para serem rodadas por linha de comando
 
@@ -96,8 +96,8 @@ pipenv run invoke mlp.train -e EPOCHS -d DATASET_PATH -s SAVE_PATH
 ```
 
 * **epochs**: Número de épocas de treinamento do modelo.
-* dataset_path: Caminho para a pasta contendo o dataset. O valor default é ``_data/dataset/artificial``.
-* save_path: Caminho para a pasta de armazenamento dos pesos. O valor default é ``_data/weights``.
+* dataset_path: Caminho para a pasta contendo o dataset. O valor default é ``_data/dataset/artificial/``.
+* save_path: Caminho para a pasta de armazenamento dos pesos. O valor default é ``_data/weights/``.
 * **kwargs: Conferir em [MLP](docs/models.md)
 
 ```
@@ -109,8 +109,8 @@ ou
 pipenv run invoke mlp.evaluate -l LOAD_PATH -d DATASET_PATH
 ```
 
-* **load_path**: Caminho para o arquivo de pesos a serem carregados.
-* dataset_path: Caminho para a pasta contendo o dataset. O valor default é ``_data/dataset/artificial``.
+* **load_path**: Caminho para o arquivo dos pesos a serem carregados.
+* dataset_path: Caminho para a pasta contendo o dataset. O valor default é ``_data/dataset/artificial/``.
 * **kwargs: Conferir em [MLP](docs/models.md)
 
 ### Residual Dense Network
@@ -128,7 +128,7 @@ pipenv run invoke rdn.train -e EPOCHS -d DATASET_PATH -s SAVE_PATH
 
 * **epochs**: Número de épocas de treinamento do modelo.
 * dataset_path: Caminho para a pasta contendo o dataset. O valor default é ``_data/dataset/artificial``.
-* save_path: Caminho para a pasta de armazenamento dos pesos. O valor default é ``_data/weights``.
+* save_path: Caminho para a pasta de armazenamento dos pesos. O valor default é ``_data/weights/``.
 * **kwargs: Conferir em [Residual Dense Network](docs/models.md)
 
 ```
@@ -140,8 +140,8 @@ ou
 pipenv run invoke rdn.evaluate -l LOAD_PATH -d DATASET_PATH
 ```
 
-* **load_path**: Caminho para o arquivo de pesos a serem carregados.
-* dataset_path: Caminho para a pasta contendo o dataset. O valor default é ``_data/dataset/artificial``.
+* **load_path**: Caminho para o arquivo dos pesos a serem carregados.
+* dataset_path: Caminho para a pasta contendo o dataset. O valor default é ``_data/dataset/artificial/``.
 * **kwargs: Conferir em [Residual Dense Network](docs/models.md)
 
 ### Testes

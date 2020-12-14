@@ -80,7 +80,7 @@ class NeuralNetwork(tf.keras.Model):
         Get gradient and update weights
         :param x: input values
         :param y: ground truth
-        :return:
+        :return: loss value
         """
         with tf.GradientTape() as tape:
             predictions = self(x)
