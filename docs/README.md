@@ -3,6 +3,7 @@
 * [Requisitos de dados](data_requirements.md)
 * [Dataset](dataset.md)
 * [Models](models.md)
+* [Utils](utils.md)
 
 # Diagrama de dependência de pacotes
 
