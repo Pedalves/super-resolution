@@ -2,9 +2,15 @@
 
 Este módulo é responsavel pelo carregamento e processamento do dataset. 
 
-Durante o prcessamento é construido o conjunto de trino através da técnica de down sampling. Ademais, é feita a quebra 
+Durante o prcessamento é construido o conjunto de trino através da técnica de down sampling. 
+
+![downsample](imgs/downsample.png)
+
+Ademais, é feita a quebra 
 da imagem em conjuntos ``n`` imagens de tamanho ``img_size x img_size`` menores e a partição do conjunto de treino, teste e validação na 
 proporção de 50%, 20% e 30% respectivamente.
+
+![sample](imgs/model_sample.png)
 
 ## Artificial Dataset Reader
 

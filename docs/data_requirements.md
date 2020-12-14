@@ -2,7 +2,7 @@
 
 O projeto depende de um conjunto de dados externo proveniente da petrobras. Existem 2 modelos sísmicos
  necessários para o funcionamento do sistema:
- 
+
 Definição das variaveis:
 ```
 n1 - (número de amostras (linhas da imagem pixel))
@@ -24,3 +24,5 @@ VMIN e VMAX - (valores máximo e mínimo de velocidades, porpriedades (o valor d
 	- n1=1216 ; n2=6912
 	- d1=7.62 ; d2=7.62
 	- VMIN=1490 ; VMAX=4550
+
+![modelo](imgs/model1.png)
