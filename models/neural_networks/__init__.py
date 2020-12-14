@@ -10,7 +10,18 @@ np.random.seed(0)
 
 
 class NeuralNetwork(tf.keras.Model):
+    """
+    Neural network base class
+    """
     def __init__(self, base_name, init_shape, learning_rate=0.001, loss='mae', **kwargs):
+        """
+        Class init
+        :param base_name: network name
+        :param init_shape: initial input shape
+        :param learning_rate: learning rate
+        :param loss: 'mae' or 'mse' loss function
+        :param kwargs: kwargs
+        """
         super(NeuralNetwork, self).__init__(name=base_name, **kwargs)
 
         self.base_name = base_name
@@ -36,19 +47,41 @@ class NeuralNetwork(tf.keras.Model):
         self.log_metrics = defaultdict(list)
 
     def __str__(self):
+        """
+        :return: network str representation
+        """
         return self.get_name()
 
     def get_architecture_str(self):
+        """
+        Get the architecture`s string representation
+        :return: architecture`s str
+        """
         raise NotImplementedError
 
     def get_name(self):
+        """
+        Get the network`s name
+        :return: network`s str name
+        """
         return f'{self.base_name}-{self.get_architecture_str()}-ep_{self.total_epochs}'
 
     def call(self, input_features):
+        """
+        Tensorflow call function
+        :param input_features: input features
+        :return: output value
+        """
         raise NotImplementedError
 
     @tf.function
     def train(self, x, y):
+        """
+        Get gradient and update weights
+        :param x: input values
+        :param y: ground truth
+        :return:
+        """
         with tf.GradientTape() as tape:
             predictions = self(x)
 
@@ -65,6 +98,11 @@ class NeuralNetwork(tf.keras.Model):
             return loss_value
 
     def save_weights(self, path='../_data/weights/'):
+        """
+        Save network`s weights as h5
+        :param path: weights folder path
+        :return: file name
+        """
         name = path + self.get_name() + '.h5'
 
         super().save_weights(name)
@@ -73,15 +111,30 @@ class NeuralNetwork(tf.keras.Model):
         return name
 
     def load_weights(self, weights):
+        """
+        Load weights
+        :param weights: weights path
+        """
         self.total_epochs = int(weights.split('ep_')[-1].split('.h5')[0])
 
         super().load_weights(weights)
 
     def create_model(self):
+        """
+        Build model
+        """
         _ = self(np.random.random_sample((1, *self.init_shape)))
 
     @staticmethod
     def get_tensor_dataset(x, y, x_val, y_val):
+        """
+        Convert numpy array into tensor slices
+        :param x: train input
+        :param y: train ground truth
+        :param x_val: validation input
+        :param y_val: validation ground truth
+        :return: x_train, y_train, x_val, y_val tensor slices
+        """
         x_train = tf.data.Dataset.from_tensor_slices(x)
         x_val = tf.data.Dataset.from_tensor_slices(x_val)
 
@@ -91,6 +144,18 @@ class NeuralNetwork(tf.keras.Model):
         return x_train, y_train, x_val, y_val
 
     def train_epochs(self, x_train, y_train, x_val, y_val, n_epochs, batch_size, verbose=True, frequency=5):
+        """
+        Train model for a given number of epochs
+        :param x_train: train input
+        :param y_train: train ground truth
+        :param x_val: validation input
+        :param y_val: validation ground truth
+        :param n_epochs: number of epochs
+        :param batch_size: batch size
+        :param verbose: verbose
+        :param frequency: print frequency by number of epochs
+        :return: train report DataFrame
+        """
         x_train_tensor, y_train_tensor, x_val_tensor, y_val_tensor = self.get_tensor_dataset(
             x_train, y_train, x_val, y_val)
         loss = []

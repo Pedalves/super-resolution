@@ -13,6 +13,10 @@ class ArtificialDatasetReader:
     """
 
     def __init__(self, dataset_path='../_data/dataset/artificial'):
+        """
+        Class init
+        :param dataset_path: dataset path
+        """
         self.dataset_path = dataset_path
         self.well_1 = self.load_dataset(
             height=1040,

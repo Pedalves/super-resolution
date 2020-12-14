@@ -31,7 +31,7 @@ x_train, y_train, x_val, y_val, x_test, y_test = dr.get_dataset(scale, img_size,
     * img_size: O tamanho das imagens. O valor default é ``64``.
     * as_cmap: Booleano representado se a imagem será convertida em uma imagem com 3 canais RGB. O valor default é ``False``.
 
-* load_dataset: Carrega os dados poço em um numpy array
+* load_dataset: Carrega os dados do poço em um numpy array.
     * **height**: Altura do poço.
     * **length**: Largura do poço.
     * **vel_path**: Caminho para a pasta contendo o arquivo binário da velocidade.
