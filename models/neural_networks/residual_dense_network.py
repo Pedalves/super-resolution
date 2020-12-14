@@ -20,6 +20,19 @@ class ResidualDenseNetwork(NeuralNetwork):
     """
     def __init__(self, init_shape, filters=64, original_dim=64, rdb_blocks=3, rdb_block_size=3,
                  learning_rate=0.0001, activ_hidden=tf.nn.relu, activ_out=tf.nn.tanh, loss='mae', **kwargs):
+        """
+        Class init
+        :param init_shape: Initial input shape
+        :param filters: number of convolutive layer filters
+        :param original_dim: Image dimension after increasing resolution
+        :param rdb_blocks: Number of RDB blocks
+        :param rdb_block_size: Number of convolutive layers in each RDB block
+        :param learning_rate: Learning rate
+        :param activ_hidden: hidden layers activation function
+        :param activ_out: output layers activation function
+        :param loss: 'mae' or 'mse' loss function
+        :param kwargs: kwargs
+        """
         super(ResidualDenseNetwork, self).__init__(init_shape=init_shape,
                                                    base_name='RDN',
                                                    learning_rate=learning_rate, loss=loss, **kwargs)

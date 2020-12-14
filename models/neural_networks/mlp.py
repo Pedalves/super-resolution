@@ -14,10 +14,25 @@ tf.keras.backend.set_floatx('float32')
 
 
 class MLP(NeuralNetwork):
+    """
+    Multi Layer Perceptron
+    """
     def __init__(self, init_shape, layers_dims=[512], original_dim=64, learning_rate=0.0001,
                  activ_hidden=tf.nn.tanh, activ_out=tf.nn.tanh, loss='mae', **kwargs):
+        """
+        Class init
+        :param init_shape: initial input shape
+        :param layers_dims: List with the number of units for each hidden layer
+        :param original_dim: Image dimension after increasing resolution
+        :param learning_rate: learning rate
+        :param activ_hidden: hidden layers activation function
+        :param activ_out: output layers activation function
+        :param loss: 'mae' or 'mse' loss function
+        :param kwargs: kwargs
+        """
         super(MLP, self).__init__(init_shape=init_shape, base_name='MLP',
                                   learning_rate=learning_rate, loss=loss, **kwargs)
+
 
         self.resolution = original_dim
 

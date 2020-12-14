@@ -17,7 +17,8 @@ Alguns destes notebooks podem estar descontinuados devido ao desenvovlimento e a
 
 `models/`: Desenvolvimento das redes neurais e os demais modelos de super resolução
 
-`super_resolution/`: Módulo principal do projeto, contendo as função com o pipeline de experimentação. 
+`super_resolution/`: Módulo contendo as função com o pipeline de experimentação. Este pipeline consiste em instanciar
+o dataset, seguido do treinamento do modelo e avaliação dos resultados.
 
 `tasks/`: Funções baseadas na biblioteca [invoke](http://www.pyinvoke.org/) para serem rodadas por linha de comando
 
@@ -28,7 +29,7 @@ Alguns destes notebooks podem estar descontinuados devido ao desenvovlimento e a
 ## Documentação
 
 a [documentação](docs/README.md) deste projeto apresenta os dados necessarios e os módulos `dataset`, `models`, 
-`super_resolution`, `tests` e `utils`.
+`tests` e `utils`.
 
 ## Desenvolvimento
 
